@@ -21,6 +21,7 @@ import ws.c.praktikum4.model.Product;
  *
  * @author asus
  */
+//
 @RestController
 public class ProductServiceController {
 private static Map<String, Product> productRepo = new HashMap<>();
@@ -42,13 +43,13 @@ private static Map<String, Product> productRepo = new HashMap<>();
       
       
    }
-   
+   //membuat pemberitahuan untuk produk telah dihapus
    @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
    public ResponseEntity<Object> delete(@PathVariable("id") String id, @RequestBody Product product) { 
       productRepo.remove(id);
       return new ResponseEntity<>("produk berhasil dihapus", HttpStatus.OK);
    }
-    
+    //membuat pemberitahuan untuk pembaharuan produk
     @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> updateProduct(@PathVariable("id") String id, @RequestBody Product product){
         
@@ -62,7 +63,7 @@ private static Map<String, Product> productRepo = new HashMap<>();
             return new  ResponseEntity<>("produk berhasil perbarui",HttpStatus.OK);
         } 
     }
-    
+    //membuat pemberitahuan untuk produk telah berhasil ditambahkan
     @RequestMapping(value = "/products", method = RequestMethod.POST)
     public ResponseEntity<Object> createProduct(@RequestBody Product product){
         
@@ -74,7 +75,7 @@ private static Map<String, Product> productRepo = new HashMap<>();
             return new ResponseEntity<>("produk berhasil ditambahkan", HttpStatus.CREATED);
         }
     }
-   
+   //
    @RequestMapping(value = "/products")
    public ResponseEntity<Object> getProduct() {
       return new ResponseEntity<>(productRepo.values(), HttpStatus.OK);

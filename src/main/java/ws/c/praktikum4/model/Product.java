@@ -10,8 +10,11 @@ package ws.c.praktikum4.model;
  * @author asus
  */
 public class Product {
-    private String id;
+   private String id;
    private String name;
+   private String quantity;
+   private String price;
+    
 
     public String getId() {
         return id;
@@ -27,6 +30,21 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+   public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
    
 }

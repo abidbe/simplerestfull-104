@@ -28,22 +28,18 @@ private static Map<String, Product> productRepo = new HashMap<>();
       Product honey = new Product();
       honey.setId("1");
       honey.setName("Honey");
+      honey.setQuantity("2");
+      honey.setPrice("Rp. 60.000");
       productRepo.put(honey.getId(), honey);
       
       Product almond = new Product();
       almond.setId("2");
       almond.setName("Almond");
+      almond.setQuantity("3");
+      almond.setPrice("Rp. 10.000");
       productRepo.put(almond.getId(), almond);
       
-      Product susu = new Product();
-      susu.setId("3");
-      susu.setName("MILK");
-      productRepo.put(susu.getId(), susu);
       
-      Product sayur = new Product();
-      sayur.setId("4");
-      sayur.setName("Retri Sawi");
-      productRepo.put(sayur.getId(), sayur);
       
    }
    
